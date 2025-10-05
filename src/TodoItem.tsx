@@ -10,9 +10,17 @@ type Todo = {
 
 type Props = {
   todo: Todo;
+  onDelete: () => void;
+  isSelected: boolean;
+  onToggleSelect: (id: number) => void;
 };
 
-export default function TodoItem({ todo }: Props) {
+export default function TodoItem({
+  todo,
+  onDelete,
+  isSelected,
+  onToggleSelect,
+}: Props) {
   return (
     <li className="p-3">
       <div className="flex justify-between items-center">
@@ -20,6 +28,8 @@ export default function TodoItem({ todo }: Props) {
           <input
             type="checkbox"
             className="checkbox checkbox-primary checkbox-sm"
+            checked={isSelected}
+            onChange={() => onToggleSelect(todo.id)}
           />
           <span className="text-md font-bold">
             <span>{todo.text}</span>
@@ -36,7 +46,7 @@ export default function TodoItem({ todo }: Props) {
             {todo.priority}
           </span>
         </div>
-        <button className="btn btn-sm btn-error btn-soft">
+        <button onClick={onDelete} className="btn btn-sm btn-error btn-soft">
           <Trash className="w-4 h-4" />
         </button>
       </div>
