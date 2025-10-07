@@ -28,11 +28,12 @@ Une application de gestion de tâches moderne, développée avec React et TypeSc
 
 ## Aperçu
 
-![Aperçu de l’application](public/todolist-moderne.png)
+![Aperçu de l’application](public/todolistApp.png)
 
 ## Technologies
 
 - React
 - TypeScript
-- Tailwind CSS (ou autre framework CSS utilisé)
+- Tailwind CSS 
+- DaisyUI
 - Icônes Lucide
