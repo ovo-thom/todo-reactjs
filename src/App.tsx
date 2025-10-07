@@ -38,7 +38,6 @@ function App() {
     setTodos(newTodos);
     setInput("");
     setPriority("Moyenne");
-    // console.log(newTodos);
   }
 
   let filteredTodos: Todo[] = [];
